@@ -1,0 +1,477 @@
+HEADM|adc|ninputs=2|noutputs=2|name=0|tag=0|nkids=1|out1=gain:1-out|out2=gain:1-out|kids1=menupage:1-obj
+CONSTANT|MU_0|value=0.00000000000000004
+CONSTANT|MU_1|value=-0.9925
+CONSTANT|E1|value=0
+CONSTANT|E6|value=0.0124
+CONSTANT|E5|value=0.0102
+CONSTANT|E4|value=0.0046
+CONSTANT|E3|value=0.0018
+CONSTANT|E2|value=0.0009
+CONSTANT|E7|value=0.1100
+CONSTANT|E8|value=0.3014
+CONSTANT|S41|value=1
+CONSTANT|S42|value=-1
+ADD|b4|clipvalue=10000|in1=S41*a1-out|in2=S42*a2-out
+MULTIPLY|S41*a1|in1=S41-out|in2=A1-out
+MULTIPLY|S42*a2|in1=S42-out|in2=a2-out
+ADDER|a4|ninputs=22|clipvalue=10000|in1=MU_0-out|in2=MU1*b4-out|in3=multiply:1-out|in4=multiply:2-out|in5=multiply:3-out|in6=multiply:4-out|in7=multiply:5-out|in8=multiply:6-out|in9=multiply:7-out|in10=multiply:8-out|in11=multiply:9-out|in12=multiply:10-out|in13=multiply:11-out|in14=multiply:12-out|in15=multiply:13-out|in16=multiply:14-out|in17=multiply:15-out|in18=multiply:16-out|in19=multiply:17-out|in20=multiply:18-out|in21=multiply:19-out|in22=multiply:20-out
+MULTIPLY|MU1*b4|in1=b4-out|in2=MU_1-out
+C_TO_A|aVect1|in=c_constant:1-out
+C_CONSTANT|c_constant:1|value=-14.1257
+C_TO_A|aVect2|in=c_constant:2-out
+C_CONSTANT|c_constant:2|value=-11.4508
+C_TO_A|aVect3|in=c_constant:3-out
+C_CONSTANT|c_constant:3|value=-9.3051
+C_TO_A|aVect4|in=c_constant:4-out
+C_CONSTANT|c_constant:4|value=-6.2003
+C_TO_A|aVect5|in=c_constant:5-out
+C_CONSTANT|c_constant:5|value=-3.4833
+C_TO_A|aVect6|in=c_constant:6-out
+C_CONSTANT|c_constant:6|value=-2.0692
+C_TO_A|aVect7|in=c_constant:7-out
+C_CONSTANT|c_constant:7|value=-1.1763
+C_TO_A|aVect8|in=c_constant:8-out
+C_CONSTANT|c_constant:8|value=-0.6193
+C_TO_A|aVect9|in=c_constant:9-out
+C_CONSTANT|c_constant:9|value=-0.4170
+C_TO_A|aVect10|in=c_constant:10-out
+C_CONSTANT|c_constant:10|value=-0.1501
+C_TO_A|aVect11|in=c_constant:11-out
+C_CONSTANT|c_constant:11|value=0.1501
+C_TO_A|aVect12|in=c_constant:12-out
+C_CONSTANT|c_constant:12|value=0.4170
+C_TO_A|aVect13|in=c_constant:13-out
+C_CONSTANT|c_constant:13|value=0.6193
+C_TO_A|aVect14|in=c_constant:14-out
+C_CONSTANT|c_constant:14|value=1.1763
+C_TO_A|aVect15|in=c_constant:15-out
+C_CONSTANT|c_constant:15|value=2.0692
+C_TO_A|aVect16|in=c_constant:16-out
+C_CONSTANT|c_constant:16|value=3.4833
+C_TO_A|aVect17|in=c_constant:17-out
+C_CONSTANT|c_constant:17|value=6.2003
+C_TO_A|aVect18|in=c_constant:18-out
+C_CONSTANT|c_constant:18|value=9.3051
+C_TO_A|aVect19|in=c_constant:19-out
+C_CONSTANT|c_constant:19|value=11.4508
+C_TO_A|aVect20|in=c_constant:20-out
+C_CONSTANT|c_constant:20|value=14.1257
+SUBTRACT|subtract:1|clipvalue=10000|in1=b4-out|in2=-14_1257-out
+MULTIPLY|multiply:1|in1=abs:1-out|in2=E1-out
+SUBTRACT|subtract:2|clipvalue=10000|in1=b4-out|in2=-11_4508-out
+MULTIPLY|multiply:2|in1=abs:2-out|in2=E2-out
+SUBTRACT|subtract:3|clipvalue=10000|in1=b4-out|in2=-9_3051-out
+MULTIPLY|multiply:3|in1=abs:3-out|in2=E3-out
+SUBTRACT|subtract:4|clipvalue=10000|in1=b4-out|in2=-6_2003-out
+MULTIPLY|multiply:4|in1=abs:4-out|in2=E4-out
+SUBTRACT|subtract:5|clipvalue=10000|in1=b4-out|in2=-3_4833-out
+MULTIPLY|multiply:5|in1=abs:5-out|in2=E5-out
+SUBTRACT|subtract:6|clipvalue=10000|in1=b4-out|in2=-2_0692-out
+MULTIPLY|multiply:6|in1=abs:6-out|in2=E6-out
+SUBTRACT|subtract:7|clipvalue=10000|in1=b4-out|in2=-1_1763-out
+MULTIPLY|multiply:7|in1=abs:7-out|in2=E7-out
+SUBTRACT|subtract:8|clipvalue=10000|in1=b4-out|in2=-0_6193-out
+MULTIPLY|multiply:8|in1=subtract:8-out|in2=E8-out
+ABS|abs:1|in=subtract:1-out
+ABS|abs:2|in=subtract:2-out
+ABS|abs:3|in=subtract:3-out
+ABS|abs:4|in=subtract:4-out
+ABS|abs:5|in=subtract:5-out
+ABS|abs:6|in=subtract:6-out
+ABS|abs:7|in=subtract:7-out
+ABS|abs:8|in=adc-null
+CONSTANT|E9|value=0.4914
+CONSTANT|E14|value=-0.1100
+CONSTANT|E13|value=-0.3014
+CONSTANT|E12|value=-0.4914
+CONSTANT|E11|value=-0.0631
+CONSTANT|E10|value=0.0631
+CONSTANT|E15|value=-0.0124
+CONSTANT|E16|value=-0.0102
+SUBTRACT|subtract:9|clipvalue=10000|in1=b4-out|in2=-0_4170-out
+MULTIPLY|multiply:9|in1=abs:9-out|in2=E9-out
+SUBTRACT|subtract:10|clipvalue=10000|in1=b4-out|in2=-0_1501-out
+MULTIPLY|multiply:10|in1=abs:10-out|in2=E10-out
+SUBTRACT|subtract:11|clipvalue=10000|in1=b4-out|in2=0_1501-out
+MULTIPLY|multiply:11|in1=abs:11-out|in2=E11-out
+SUBTRACT|subtract:12|clipvalue=10000|in1=b4-out|in2=0_4170-out
+MULTIPLY|multiply:12|in1=abs:12-out|in2=E12-out
+SUBTRACT|subtract:13|clipvalue=10000|in1=b4-out|in2=0_6193-out
+MULTIPLY|multiply:13|in1=abs:13-out|in2=E13-out
+SUBTRACT|subtract:14|clipvalue=10000|in1=b4-out|in2=1_1763-out
+MULTIPLY|multiply:14|in1=abs:14-out|in2=E14-out
+SUBTRACT|subtract:15|clipvalue=10000|in1=b4-out|in2=2_0692-out
+MULTIPLY|multiply:15|in1=abs:15-out|in2=E15-out
+SUBTRACT|subtract:16|clipvalue=10000|in1=b4-out|in2=3_4833-out
+MULTIPLY|multiply:16|in1=abs:16-out|in2=E16-out
+ABS|abs:9|in=subtract:9-out
+ABS|abs:10|in=subtract:10-out
+ABS|abs:11|in=subtract:11-out
+ABS|abs:12|in=subtract:12-out
+ABS|abs:13|in=subtract:13-out
+ABS|abs:14|in=subtract:14-out
+ABS|abs:15|in=subtract:15-out
+ABS|abs:16|in=subtract:16-out
+CONSTANT|E17|value=-0.0046
+SUBTRACT|subtract:17|clipvalue=10000|in1=b4-out|in2=6_2003-out
+MULTIPLY|multiply:17|in1=abs:17-out|in2=E17-out
+ABS|abs:17|in=subtract:17-out
+CONSTANT|E18|value=-0.0018
+SUBTRACT|subtract:18|clipvalue=10000|in1=b4-out|in2=9_3051-out
+MULTIPLY|multiply:18|in1=abs:18-out|in2=E18-out
+ABS|abs:18|in=subtract:18-out
+CONSTANT|E19|value=-0.0009
+SUBTRACT|subtract:19|clipvalue=10000|in1=b4-out|in2=11_4508-out
+MULTIPLY|multiply:19|in1=abs:19-out|in2=E19-out
+ABS|abs:19|in=subtract:19-out
+CONSTANT|E20|value=0
+SUBTRACT|subtract:20|clipvalue=10000|in1=b4-out|in2=14_1257-out
+MULTIPLY|multiply:20|in1=abs:20-out|in2=E20-out
+ABS|abs:20|in=subtract:20-out
+CONSTANT|S11|value=1
+MULTIPLY|b1|in1=S11-out|in2=A1-out
+CONSTANT|S21|value=0.0011
+CONSTANT|S22|value=0.9989
+CONSTANT|S24|value=-0.0011
+MULTIPLY|S21*a1|in1=S21-out|in2=A1-out
+MULTIPLY|S22*a2|in1=S22-out|in2=b2-out
+MULTIPLY|S24*a4|in1=S24-out|in2=a4-out
+ADDER|b2|ninputs=3|clipvalue=10000|in1=S21*a1-out|in2=S22*a2-out|in3=S24*a4-out
+MULTIPLY|a2|in1=1/S22-out|in2=S22*a2-out
+ADDER|b3|ninputs=3|clipvalue=10000|in1=S31*a1-out|in2=S32*a2-out|in3=S34*a4-out
+CONSTANT|S31|value=0.9989
+CONSTANT|S32|value=-0.9989
+CONSTANT|S34|value=-0.9989
+MULTIPLY|S31*a1|in1=S31-out|in2=A1-out
+MULTIPLY|S32*a2|in1=S32-out|in2=a2-out
+MULTIPLY|S34*a4|in1=S34-out|in2=a4-out
+ADD|a4+b4|clipvalue=10000|in1=a4-out|in2=b4-out
+MULTIPLY|Vout|in1=a4+b4-out|in2=1/2-out
+CONSTANT|1/2|value=0.5
+ADD|2*V_IN|clipvalue=10000|in1=adc-in1|in2=adc-in2
+MULTIPLY|A1|in1=gain:2-out|in2=1/2-out
+MENUPAGE|menupage:1|name=DRIVE/OUTPUT|tag=0|nsubuos=5|obj1=OUTPUT-obj|obj2=IN_DRIVE-obj|obj3=adc-nullobj|obj4=adc-nullobj|obj5=adc-nullobj
+KNOB|OUTPUT|statement=OUTPUT|name=0|min=-30|max=0|res=0.5|default=0
+GAIN|gain:1|clipvalue=10000|in=Vout-out|gain=OUTPUT-out
+KNOB|IN_DRIVE|statement=DRIVE|name=0|min=0|max=30|res=0.5|default=0
+GAIN|gain:2|clipvalue=10000|in=2*V_IN-out|gain=IN_DRIVE-out
+CONSTANT|1|value=1
+ADDER|14_1257|ninputs=15|clipvalue=10000|in1=constant:1-out|in2=constant:2-out|in3=constant:3-out|in4=constant:4-out|in5=constant:5-out|in6=constant:6-out|in7=constant:7-out|in8=constant:8-out|in9=constant:9-out|in10=constant:10-out|in11=constant:11-out|in12=constant:12-out|in13=constant:13-out|in14=constant:14-out|in15=constant:15-out
+CONSTANT|constant:1|value=1
+CONSTANT|constant:2|value=1
+CONSTANT|constant:3|value=1
+CONSTANT|constant:4|value=1
+CONSTANT|constant:5|value=1
+CONSTANT|constant:6|value=1
+CONSTANT|constant:7|value=1
+CONSTANT|constant:8|value=1
+CONSTANT|constant:9|value=1
+CONSTANT|constant:10|value=1
+CONSTANT|constant:11|value=1
+CONSTANT|constant:12|value=1
+CONSTANT|constant:13|value=1
+CONSTANT|constant:14|value=1
+CONSTANT|constant:15|value=0.1257
+MULTIPLY|-14_1257|in1=-1-out|in2=14_1257-out
+CONSTANT|-1|value=-1
+ADDER|11_4508|ninputs=12|clipvalue=10000|in1=constant:16-out|in2=constant:17-out|in3=constant:18-out|in4=constant:19-out|in5=constant:20-out|in6=constant:21-out|in7=constant:22-out|in8=constant:23-out|in9=constant:24-out|in10=constant:25-out|in11=constant:26-out|in12=constant:27-out
+CONSTANT|constant:16|value=1
+CONSTANT|constant:17|value=1
+CONSTANT|constant:18|value=1
+CONSTANT|constant:19|value=1
+CONSTANT|constant:20|value=1
+CONSTANT|constant:21|value=1
+CONSTANT|constant:22|value=1
+CONSTANT|constant:23|value=1
+CONSTANT|constant:24|value=1
+CONSTANT|constant:25|value=1
+CONSTANT|constant:26|value=1
+CONSTANT|constant:27|value=0.4508
+MULTIPLY|-11_4508|in1=-1-out|in2=11_4508-out
+ADDER|9_3051|ninputs=10|clipvalue=10000|in1=constant:28-out|in2=constant:29-out|in3=constant:30-out|in4=constant:31-out|in5=constant:32-out|in6=constant:33-out|in7=constant:34-out|in8=constant:35-out|in9=constant:36-out|in10=constant:37-out
+CONSTANT|constant:28|value=1
+CONSTANT|constant:29|value=1
+CONSTANT|constant:30|value=1
+CONSTANT|constant:31|value=1
+CONSTANT|constant:32|value=1
+CONSTANT|constant:33|value=1
+CONSTANT|constant:34|value=1
+CONSTANT|constant:35|value=1
+CONSTANT|constant:36|value=1
+CONSTANT|constant:37|value=0.3051
+MULTIPLY|-9_3051|in1=-1-out|in2=9_3051-out
+ADDER|6_2003|ninputs=7|clipvalue=10000|in1=constant:38-out|in2=constant:39-out|in3=constant:40-out|in4=constant:41-out|in5=constant:42-out|in6=constant:43-out|in7=constant:44-out
+CONSTANT|constant:38|value=1
+CONSTANT|constant:39|value=1
+CONSTANT|constant:40|value=1
+CONSTANT|constant:41|value=1
+CONSTANT|constant:42|value=1
+CONSTANT|constant:43|value=1
+CONSTANT|constant:44|value=0.2003
+MULTIPLY|-6_2003|in1=-1-out|in2=6_2003-out
+ADDER|3_4833|ninputs=4|clipvalue=10000|in1=constant:45-out|in2=constant:46-out|in3=constant:47-out|in4=constant:48-out
+CONSTANT|constant:45|value=1
+CONSTANT|constant:46|value=1
+CONSTANT|constant:47|value=1
+CONSTANT|constant:48|value=0.4833
+MULTIPLY|-3_4833|in1=-1-out|in2=3_4833-out
+ADDER|2_0692|ninputs=3|clipvalue=10000|in1=constant:49-out|in2=constant:50-out|in3=constant:51-out
+CONSTANT|constant:49|value=1
+CONSTANT|constant:50|value=1
+CONSTANT|constant:51|value=0.0692
+MULTIPLY|-2_0692|in1=adc-null|in2=2_0692-out
+ADDER|1_1763|ninputs=2|clipvalue=10000|in1=constant:53-out|in2=constant:54-out
+CONSTANT|constant:53|value=1
+CONSTANT|constant:54|value=0.1763
+MULTIPLY|-1_1763|in1=-1-out|in2=1_1763-out
+CONSTANT|0_6193|value=0.6193
+MULTIPLY|-0_6193|in1=-1-out|in2=0_6193-out
+CONSTANT|0_4170|value=0.4170
+MULTIPLY|-0_4170|in1=-1-out|in2=0_4170-out
+CONSTANT|0_1501|value=0.1501
+MULTIPLY|-0_1501|in1=-1-out|in2=0_1501-out
+MOMENTARY|momentary:1|name=MUTE|statement=MUTE|tag=MUTE
+C_NOT|c_not:1|in=momentary:1-out
+SCALE|scale:1|in=adc-null|amp=c_not:1-out
+ADD|1/S22|clipvalue=10000|in1=1-out|in2=1:1-out
+CONSTANT|1:1|value=0.0022
+TAIL|tail
+--
+adc| ;=30,30,100,0
+MU_0| ;=664,1384,100,0
+MU_1| ;=544,1504,100,0
+E1| ;=312,1744,100,0
+E6| ;=304,2816,100,0
+E5| ;=304,2608,100,0
+E4| ;=312,2376,100,0
+E3| ;=312,2144,100,0
+E2| ;=312,1944,100,0
+E7| ;=296,3048,100,0
+E8| ;=296,3280,100,0
+S41| ;=24,1336,100,0
+S42| ;=24,1432,100,0
+b4| ;=512,1376,100,0
+S41*a1| ;=384,1328,100,0
+S42*a2| ;=384,1432,100,0
+a4| ;=872,1432,100,0
+MU1*b4| ;=664,1488,100,0
+aVect1| ;=120,1624,100,0
+c_constant:1| ;=16,1624,100,0
+aVect2| ;=120,1848,100,0
+c_constant:2| ;=16,1848,100,0
+aVect3| ;=128,2048,100,0
+c_constant:3| ;=24,2048,100,0
+aVect4| ;=128,2272,100,0
+c_constant:4| ;=24,2272,100,0
+aVect5| ;=120,2512,100,0
+c_constant:5| ;=16,2512,100,0
+aVect6| ;=120,2712,100,0
+c_constant:6| ;=16,2712,100,0
+aVect7| ;=112,2960,100,0
+c_constant:7| ;=16,2960,100,0
+aVect8| ;=120,3176,100,0
+c_constant:8| ;=16,3176,100,0
+aVect9| ;=128,3416,100,0
+c_constant:9| ;=24,3416,100,0
+aVect10| ;=120,3616,100,0
+c_constant:10| ;=16,3616,100,0
+aVect11| ;=120,3816,100,0
+c_constant:11| ;=16,3816,100,0
+aVect12| ;=120,4048,100,0
+c_constant:12| ;=16,4048,100,0
+aVect13| ;=120,4280,100,0
+c_constant:13| ;=16,4280,100,0
+aVect14| ;=120,4512,100,0
+c_constant:14| ;=16,4512,100,0
+aVect15| ;=112,4760,100,0
+c_constant:15| ;=8,4760,100,0
+aVect16| ;=104,4952,100,0
+c_constant:16| ;=0,4952,100,0
+aVect17| ;=112,5168,100,0
+c_constant:17| ;=8,5168,100,0
+aVect18| ;=104,5384,100,0
+c_constant:18| ;=0,5384,100,0
+aVect19| ;=96,5648,100,0
+c_constant:19| ;=0,5648,100,0
+aVect20| ;=104,5880,100,0
+c_constant:20| ;=0,5880,100,0
+subtract:1| ;=312,1648,100,0
+multiply:1| ;=528,1648,100,0
+subtract:2| ;=312,1848,100,0
+multiply:2| ;=512,1848,100,0
+subtract:3| ;=312,2048,100,0
+multiply:3| ;=512,2048,100,0
+subtract:4| ;=312,2272,100,0
+multiply:4| ;=520,2272,100,0
+subtract:5| ;=304,2512,100,0
+multiply:5| ;=528,2512,100,0
+subtract:6| ;=304,2712,100,0
+multiply:6| ;=528,2712,100,0
+subtract:7| ;=296,2944,100,0
+multiply:7| ;=536,2944,100,0
+subtract:8| ;=296,3168,100,0
+multiply:8| ;=536,3168,100,0
+abs:1| ;=416,1648,100,0
+abs:2| ;=416,1848,100,0
+abs:3| ;=408,2048,100,0
+abs:4| ;=408,2272,100,0
+abs:5| ;=408,2512,100,0
+abs:6| ;=408,2712,100,0
+abs:7| ;=408,2944,100,0
+abs:8| ;=408,3168,100,0
+E9| ;=296,3512,100,0
+E14| ;=288,4584,100,0
+E13| ;=288,4376,100,0
+E12| ;=296,4144,100,0
+E11| ;=296,3912,100,0
+E10| ;=296,3712,100,0
+E15| ;=280,4856,100,0
+E16| ;=280,5072,100,0
+subtract:9| ;=296,3416,100,0
+multiply:9| ;=512,3416,100,0
+subtract:10| ;=296,3616,100,0
+multiply:10| ;=496,3616,100,0
+subtract:11| ;=296,3816,100,0
+multiply:11| ;=496,3816,100,0
+subtract:12| ;=296,4040,100,0
+multiply:12| ;=504,4040,100,0
+subtract:13| ;=288,4280,100,0
+multiply:13| ;=512,4280,100,0
+subtract:14| ;=288,4480,100,0
+multiply:14| ;=512,4480,100,0
+subtract:15| ;=280,4752,100,0
+multiply:15| ;=520,4752,100,0
+subtract:16| ;=280,4960,100,0
+multiply:16| ;=520,4960,100,0
+abs:9| ;=400,3416,100,0
+abs:10| ;=400,3616,100,0
+abs:11| ;=392,3816,100,0
+abs:12| ;=392,4040,100,0
+abs:13| ;=392,4280,100,0
+abs:14| ;=392,4480,100,0
+abs:15| ;=392,4744,100,0
+abs:16| ;=392,4960,100,0
+E17| ;=280,5280,100,0
+subtract:17| ;=280,5168,100,0
+multiply:17| ;=520,5168,100,0
+abs:17| ;=392,5168,100,0
+E18| ;=280,5496,100,0
+subtract:18| ;=280,5384,100,0
+multiply:18| ;=520,5384,100,0
+abs:18| ;=392,5384,100,0
+E19| ;=272,5752,100,0
+subtract:19| ;=272,5640,100,0
+multiply:19| ;=512,5640,100,0
+abs:19| ;=384,5640,100,0
+E20| ;=272,5984,100,0
+subtract:20| ;=272,5872,100,0
+multiply:20| ;=512,5872,100,0
+abs:20| ;=376,5872,100,0
+S11| ;=24,656,100,0
+b1| ;=784,688,100,0
+S21| ;=24,752,100,0
+S22| ;=24,848,100,0
+S24| ;=24,944,100,0
+S21*a1| ;=192,760,100,0
+S22*a2| ;=192,864,100,0
+S24*a4| ;=192,960,100,0
+b2| ;=792,832,100,0
+a2| ;=416,736,100,0
+b3| ;=792,944,100,0
+S31| ;=24,1048,100,0
+S32| ;=24,1144,100,0
+S34| ;=24,1240,100,0
+S31*a1| ;=192,1056,100,0
+S32*a2| ;=192,1160,100,0
+S34*a4| ;=192,1256,100,0
+a4+b4| ;=1032,232,100,0
+Vout| ;=1168,256,100,0
+1/2| ;=32,424,100,0
+2*V_IN| ;=176,24,100,0
+A1| ;=472,232,100,0
+menupage:1| ;=1432,584,100,0
+OUTPUT| ;=1128,480,100,0
+gain:1| ;=1312,256,100,0
+IN_DRIVE| ;=56,144,100,0
+gain:2| ;=336,120,100,0
+1| ;=152,520,100,0
+14_1257| ;=1240,1584,100,0
+constant:1| ;=1104,1512,100,0
+constant:2| ;=1104,1608,100,0
+constant:3| ;=1104,1704,100,0
+constant:4| ;=1104,1800,100,0
+constant:5| ;=1104,1896,100,0
+constant:6| ;=1104,1984,100,0
+constant:7| ;=1104,2080,100,0
+constant:8| ;=1104,2176,100,0
+constant:9| ;=1104,2272,100,0
+constant:10| ;=1104,2360,100,0
+constant:11| ;=1104,2456,100,0
+constant:12| ;=1104,2552,100,0
+constant:13| ;=1104,2648,100,0
+constant:14| ;=1104,2744,100,0
+constant:15| ;=1104,2840,100,0
+-14_1257| ;=1240,1320,100,0
+-1| ;=1240,1424,100,0
+11_4508| ;=1552,1576,100,0
+constant:16| ;=1416,1504,100,0
+constant:17| ;=1416,1600,100,0
+constant:18| ;=1416,1696,100,0
+constant:19| ;=1416,1792,100,0
+constant:20| ;=1416,1888,100,0
+constant:21| ;=1416,1976,100,0
+constant:22| ;=1416,2072,100,0
+constant:23| ;=1416,2168,100,0
+constant:24| ;=1416,2264,100,0
+constant:25| ;=1416,2352,100,0
+constant:26| ;=1416,2448,100,0
+constant:27| ;=1416,2544,100,0
+-11_4508| ;=1552,1320,100,0
+9_3051| ;=1832,1576,100,0
+constant:28| ;=1696,1504,100,0
+constant:29| ;=1696,1600,100,0
+constant:30| ;=1696,1696,100,0
+constant:31| ;=1696,1792,100,0
+constant:32| ;=1696,1888,100,0
+constant:33| ;=1696,1976,100,0
+constant:34| ;=1696,2072,100,0
+constant:35| ;=1696,2168,100,0
+constant:36| ;=1696,2264,100,0
+constant:37| ;=1696,2352,100,0
+-9_3051| ;=1832,1320,100,0
+6_2003| ;=2088,1576,100,0
+constant:38| ;=1952,1504,100,0
+constant:39| ;=1952,1600,100,0
+constant:40| ;=1952,1696,100,0
+constant:41| ;=1952,1792,100,0
+constant:42| ;=1952,1888,100,0
+constant:43| ;=1952,1976,100,0
+constant:44| ;=1952,2072,100,0
+-6_2003| ;=2088,1320,100,0
+3_4833| ;=2344,1576,100,0
+constant:45| ;=2208,1504,100,0
+constant:46| ;=2208,1600,100,0
+constant:47| ;=2208,1696,100,0
+constant:48| ;=2208,1792,100,0
+-3_4833| ;=2344,1320,100,0
+2_0692| ;=2600,1576,100,0
+constant:49| ;=2464,1504,100,0
+constant:50| ;=2464,1600,100,0
+constant:51| ;=2464,1696,100,0
+-2_0692| ;=2600,1320,100,0
+1_1763| ;=2856,1576,100,0
+constant:53| ;=2720,1504,100,0
+constant:54| ;=2720,1600,100,0
+-1_1763| ;=2856,1320,100,0
+0_6193| ;=3000,1504,100,0
+-0_6193| ;=3000,1320,100,0
+0_4170| ;=3136,1504,100,0
+-0_4170| ;=3136,1320,100,0
+0_1501| ;=3248,1504,100,0
+-0_1501| ;=3248,1320,100,0
+momentary:1| ;=1128,664,100,0
+c_not:1| ;=1320,440,100,0
+scale:1| ;=1472,368,100,0
+1/S22| ;=272,560,100,0
+1:1| ;=152,608,100,0
+tail|

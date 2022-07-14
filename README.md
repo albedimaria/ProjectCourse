@@ -18,8 +18,6 @@ Softwares: Matlab, VSig3
 
 Hardware: Eventide H9000
 
-***
-
 ## To download: getting started
 
 *VSig3 is only available for H9000 or H9000R owners, and will only be visible on the H9000 installers page (Requires H9000 registration).*

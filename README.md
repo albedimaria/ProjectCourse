@@ -26,7 +26,7 @@ To run the code:
 - It is required to physically have the H9000 hardware, the Emote software and VSig3 platform
 - It is necessary to match the sampling frequency of the device and the sampling frequency of the H9000.
 - The file of VSig3 has to be loaded in the fx chain of the H9000. This can done directly from the settings of the VSig3 file
-- At this point, the knobs to control the various parameters of the diodes clipper will be visible in the algorithm section of the GUI of the H9000
+- The knobs to control the various parameters of the diodes clipper will be visible in the algorithm section of the GUI of the H9000
 - It is sufficient to play any record to appreciate the effect of the plugin
 
 ***

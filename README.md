@@ -7,8 +7,7 @@ VSig3’s language allows also the creation of low-level algorithms,
 although there are not any example in the literature. In this paper we show how to model linear and nonlinear audio circuits with
 the Wave Digital Filters (WDFs) method, in the VSig3 platform.
 In particular, to deal with nonlinearities, the Canonical PieceWise-Linear (CPWL) representation is adopted. Both WDFs and CPWL
-exhibit highly desirable properties that perfectly match the possibilities offered by the VSig3, even considering the language’s lim-
-itations, which will be presented. We will show the steps of the
+exhibit highly desirable properties that perfectly match the possibilities offered by the VSig3, even considering the language’s limitations, which will be presented. We will show the steps of the
 first successful implementation ever done of a WDFs-based algorithm on H9000 and, at last, a diode clipper circuit as an example of
 application, in order to verify the validity of the proposed method.
 
